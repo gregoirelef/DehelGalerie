@@ -45,13 +45,23 @@ export default [
   }
 ];
 ```
+- `npm install pg`
+
+
+
+
+
+
+
+
+
 
 - `module a installer`
  - ✅ node
  - ✅ express
  - ✅ ejs
  - ✅ esLint
- - postgreSQL
+ - ✅postgreSQL
 
 
 
@@ -60,11 +70,14 @@ export default [
 # parramettrage
 
 ```
-- gitignore
-- cmd run dev
+- ✅gitignore
+- ✅cmd run dev
 - .env
-- .env.config
-- 
+- ✅.env.config
+- ✅eslint.config.js
+
+
+
 - ✅
 - ❌
 
