@@ -1,34 +1,42 @@
-DROP TABLE IF EXISTS "review";
-DROP TABLE IF EXISTS "figurine";
 
-CREATE TABLE IF NOT EXISTS "figurine" (
+DROP TABLE IF EXISTS "dessins";
+DROP TABLE IF EXISTS "artiste";
+
+CREATE TABLE IF NOT EXISTS "artiste" (
   "id" SERIAL PRIMARY KEY,
-  "name" TEXT,
-  "description" TEXT,
-  "size" REAL, -- REAL correspond à "nombre à virgule"
-  "price" REAL NOT NULL,
-  "category" TEXT
+  "nom" TEXT NOT NULL,
+  "prenom" TEXT NOT NULL
 );
 
-set client_encoding to utf8;
-
-INSERT INTO "figurine"("id","name", "description", "size", "price", "category") VALUES
-(1,'Aerith', 'Aerith Gainsborough est la dernière descendante des Cetras (ou Anciens), fille du professeur Gast et d''Ifalna',35,24.99,'Gentil'),
-(2,'Barret', 'Barret Wallaceest le chef d''AVALANCHE, groupe écologiste de résistance à l''épuisement des ressources planétaires (l''énergie Mako) par la Shinra.',30,24.99,'Gentil'),
-(3,'Cloud', 'Cloud Strife est le principal héros de Final Fantasy VII. Convaincu d''être un ancien SOLDAT, il est au début du jeu un mercenaire employé par AVALANCHE.',37,34.99,'Gentil'),
-(4,'Nanaki', 'Rouge XIII, de son vrai nom Nanaki, est l''un des derniers survivants de sa tribu, composée de personnages proches des félidés (lion, tigre, jaguar, ...) par leur aspect physique, vivant à Cosmo Canyon.',25,24.99,'Animal'),
-(5,'Sephiroth', 'Sephiroth est présenté au cours du jeu comme le fils de Hojo, un savant fou, et de Lucrécia, son assistante.',35,34.99,'Méchant'),
-(6,'Tifa', 'Tifa Lockheart est une jeune femme originaire de Nibelheim, amie d''enfance de Cloud et membre du groupe AVALANCHE',35,24.99,'Gentil');
-
-
--- Review
-
-CREATE TABLE IF NOT EXISTS "review" (
+CREATE TABLE IF NOT EXISTS "dessins" (
   "id" SERIAL PRIMARY KEY,
-  "author" TEXT NOT NULL,
-  "note" REAL NOT NULL,
-  "title" TEXT,
-  "message" TEXT,
-  "figurine_id" INT,
-  FOREIGN KEY("figurine_id") REFERENCES "figurine"("id")
+  "titre" TEXT NOT NULL,
+  "reference" TEXT,
+  "date_realisation" DATE,
+  "format" TEXT NOT NULL,
+  "signature" BOOLEAN NOT NULL,
+  "img_url" TEXT,
+  "artiste_id" INTEGER,
+  FOREIGN KEY("artiste_id") REFERENCES "artiste"("id")
 );
+
+SET client_encoding TO 'UTF8';
+
+INSERT INTO "artiste" ("nom", "prenom") 
+VALUES 
+('daniel', 'lefebvre');
+
+
+
+INSERT INTO "dessins" ("titre", "reference", "date_realisation", "format", "signature", "img_url", "artiste_id") 
+VALUES 
+('Micket et yoda', NULL, NULL, '24x32', TRUE, 'public/img/Micket et yoda.jpg', 1);
+('Journée de la gentillesse', 'Attentats Paris 13 Nov 2015', '2015-11-14', '24x32', TRUE, 'public/img/Journée de la gentillesse.jpg', 1);
+('Républic', `etat d'urgence +cop21`, '2015-12-01', '21x29', TRUE, 'public/img/Républic.jpg', 1);
+('Goodyear', 'procès goodyears avec condamnations 01/2016', '2016-01-22', '24x32', TRUE, 'public/img/Journée de la gentillesse.jpg', 1);
+(`C'est le prinptemps`, 'élections départementales 2015', '2015-03-20', '24x32', TRUE, 'public/img/Journée de la gentillesse.jpg', 1);
+('Fashion week', 'fashion week + cop21', '2015-12-12', '24x32', TRUE, 'public/img/Journée de la gentillesse.jpg', 1);
+('Tourisme shebab', 'attaque Kenia 147 mort', '2015-04-02', '24x32', TRUE, 'public/img/Journée de la gentillesse.jpg', 1);
+(`L'air du temps`, `Réforme de l'orthographe`, '2016-03-20', '24x32', TRUE, 'public/img/Journée de la gentillesse.jpg', 1);
+('Le Carillon', 'Attentat de Paris', '2015-11-23', '21x29', TRUE, 'public/img/Journée de la gentillesse.jpg', 1);
+('Germanwings', 'accident German airwings', NULL, '24x32', TRUE, 'public/img/Journée de la gentillesse.jpg', 1);
