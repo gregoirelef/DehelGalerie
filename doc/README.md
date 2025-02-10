@@ -46,6 +46,7 @@ export default [
 ];
 ```
 - `npm install pg`
+- `npm install dotenv`
 
 
 
@@ -62,6 +63,8 @@ export default [
  - ✅ ejs
  - ✅ esLint
  - ✅postgreSQL
+ - ✅dotenv
+
 
 
 

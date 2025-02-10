@@ -8,5 +8,7 @@
 -npm install <package>
 -npm install --save-dev eslint
 -npm install pg
+-npm install dotenv
+
 
 ```
