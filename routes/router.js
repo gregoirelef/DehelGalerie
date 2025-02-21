@@ -7,11 +7,6 @@ const router = Router();
 
 
 
-
-
-
-
-
 router.get(`/`, mainController.renderHomePage);
 
 

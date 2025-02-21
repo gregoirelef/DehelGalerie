@@ -5,5 +5,5 @@
 
 
 export const renderHomePage = (req, res) => {
-    res.render("acceuil");
-  };
+  res.render("acceuil");
+};

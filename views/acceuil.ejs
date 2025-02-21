@@ -5,39 +5,170 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>dehellgalerie</title>
 
-  <!-- Pico.css : plutôt adapté pour du prototypage -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <!--import tailwind css -->
+  <link href="./css/output.css" rel="stylesheet">
 
+
+<!--import icone -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-
+ <!--import script js main -->
+ <script defer src="../js/main.js"></script>
 
 </head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <a href="/">
-          <img src="/images/community.svg" alt="Logo Trombinoclock">
-        </a>
-      </ul>
 
-      <ul>
-          <li>Bonjour </li>
-        
-        <li><a href="/promos">Promotions</a></li>
-        <li><a href="/students">Étudiants</a></li>
-        
-          <li><a href="/logout">Se deconnecter</a></li>
-        
-      </ul>
+
+  <body class="bg-gray-100">
+
+    <nav class="bg-white shadow-lg">
+        <div class=" mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center space-x-2 text-xl font-bold text-gray-700">
+                  <img src="/favicon.ico" alt="Logo Trombinoclock"><span><h1 class="rounded-md font-medium text-gray-300">Dehelgalerie</h1></span>
+                </a>
+                
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700">Accueil</a></li>
+                    <li class="relative group">
+                      <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" id="galery-menu">La galerie</a>
+                      <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 focus:outline-hidden hidden" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" id="dropdown-menu">
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">les dessins</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">les planches de dessins</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">les BD</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">les tableaux</a>
+                      </div>
+                   </li>
+                    <li><a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700">À propos</a></li>
+                    <li><a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700">Contact</a></li>
+                    <li class="ml-auto">
+                      <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 bg-blue-500 text-white py-2 px-4 rounded-md">Administration</a>
+                  </li>
+                </ul>
+                <button class="md:hidden text-gray-600 focus:outline-none" id="menu-btn">
+                    ☰
+                </button>
+            </div>
+        </div>
     </nav>
-  </header>
 
-<p>hello world</p>
+    <header class="relative w-full h-auto md:h-96 bg-center bg-cover flex items-center justify-center text-white text-center background-hdr-img">
+      <div class="bg-black/50 absolute inset-0"></div> <!-- Overlay pour assombrir l'image -->
+      <div class="relative z-10 px-4">
+        <h1 class="text-xl md:text-3xl lg:text-4xl font-bold">Bienvenue sur DehelGalerie</h1>
+
+        <h1 class="text-base md:text-xl lg:text-2xl font-bold mt-2">Un espace dédié à l’art, à la réflexion et à la liberté d’expression</h1>
+        
+        <p class="text-sm md:text-base lg:text-base mt-2 px-4">Découvrez l’univers unique de DehelGalerie, un espace dédié à l’œuvre d’une vie. Ce site a été créé pour présenter et préserver le travail réalisé par mon père en tant qu’artiste, à travers ses dessins, peintures et créations qui ont marqué son parcours.</p>
+
+        <p class="text-sm md:text-base lg:text-base mt-2 px-4">DehelGalerie est bien plus qu’une simple collection d’œuvres : c’est un lieu de réflexion, de critique et d’expression. Certains contenus, notamment des caricatures, peuvent heurter la sensibilité de certaines personnes. Loin d’une volonté de provoquer gratuitement, ces œuvres s’inscrivent dans une tradition de satire engagée, visant à questionner la société, dénoncer ses travers et défendre la liberté d’expression.</p>
+
+        <p class="text-sm md:text-base lg:text-base mt-2 px-4">Mon père croyait en un monde où chacun, peu importe son origine, sa religion ou son histoire, pouvait s’exprimer librement et être respecté. Ses dessins, parfois incisifs, avaient pour but de faire réfléchir, éveiller les consciences et encourager le dialogue.</p>
+
+
+        <p class="text-sm md:text-base lg:text-base mt-2 px-4">Nous espérons que vous prendrez le temps de parcourir son travail avec un esprit ouvert et curieux. Bonne visite sur DehelGalerie !</p>
+
+      </div>
+    </header>
+
+    
+    <section class="py-2 bg-gray-50">
+      <!-- Encart Titre -->
+      <div class="relative w-full md:w-2/3 lg:w-2/3 mb-8 ml-2 text-white px-8 py-4" >
+          <h2 class=" text-base md:text-xl lg:text-2xl font-bold relative z-10">Les dernières œuvres ajoutées</h2>
+        <div class="w-full absolute inset-0 bg-gradient-to-r from-black to-transparent rounded-lg"></div>
+      </div>
+
+      <!-- Cards -->
+      <div class="flex flex-wrap justify-center gap-8">
+        <!-- Card 1 -->
+        <div class="w-72 bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="https://via.placeholder.com/300" alt="Artwork" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-xl">Œuvre 1</h3>
+            <p class="text-gray-500">Description de l'œuvre 1.</p>
+          </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="w-72 bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="https://via.placeholder.com/300" alt="Artwork" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-xl">Œuvre 2</h3>
+            <p class="text-gray-500">Description de l'œuvre 2.</p>
+          </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="w-72 bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="https://via.placeholder.com/300" alt="Artwork" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-xl">Œuvre 3</h3>
+            <p class="text-gray-500">Description de l'œuvre 3.</p>
+          </div>
+        </div>
+    
+        <!-- Card 4 (Hidden by default) -->
+        <div class="w-72 bg-white shadow-lg rounded-lg overflow-hidden hidden">
+          <img src="https://via.placeholder.com/300" alt="Artwork" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-xl">Œuvre 4</h3>
+            <p class="text-gray-500">Description de l'œuvre 4.</p>
+          </div>
+        </div>
+    
+        <!-- Card 5 (Hidden by default) -->
+        <div class="w-72 bg-white shadow-lg rounded-lg overflow-hidden hidden">
+          <img src="https://via.placeholder.com/300" alt="Artwork" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-xl">Œuvre 5</h3>
+            <p class="text-gray-500">Description de l'œuvre 5.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col rounded-2xl w-72 bg-[#ffffff] shadow-xl">
+        <figure class="flex justify-center items-center rounded-2xl">
+            <img src="https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png" alt="Card Preview" class="rounded-t-2xl">
+        </figure>
+        <!---->
+        <div class="flex flex-col p-8">
+            <div class="text-2xl font-bold   text-[#374151] pb-6">Generator</div>
+            <div class=" text-sm   text-[#374151]">Leverage a graphical editor to create, design and customize beautiful web components.</div>
+            <div class="flex justify-end pt-6">
+                <button class="bg-[#7e22ce] text-[#ffffff] w-full font-bold text-base  p-3 rounded-lg hover:bg-purple-800 active:scale-95 transition-transform transform">Try it out!</button>
+            </div>
+            <!---->
+        </div>
+    </div>
+    
 
 
 
+      <!-- Bouton pour faire défiler plus de cartes -->
+      <div class="flex justify-center mt-6">
+        <button id="loadMore" class="bg-blue-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-200">
+          Voir plus
+        </button>
+      </div>
+    </section>
+
+
+  
+
+
+
+
+
+
+
+ <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+
+
+
+
+  
 
 
 

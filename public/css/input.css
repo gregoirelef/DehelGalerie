@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.background-hdr-img{
+    background-image: url('../img/fond-acceuil.JPG');
+    background-size: cover;
+    background-position: center;
+}
