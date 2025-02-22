@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dehellgalerie</title>
+
+  <!--import tailwind css -->
+  <link href="./css/output.css" rel="stylesheet">
+
+
+<!--import icone -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+ <!--import script js main -->
+ <script defer src="../js/main.js"></script>
+ <script defer src="./js/slider.js"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="bg-white shadow-lg">
+        <div class=" mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="flex items-center space-x-2 text-xl font-bold text-gray-700">
+                  <img src="/favicon.ico" alt="Logo Trombinoclock"><span><h1 class="rounded-md font-medium text-gray-300">Dehelgalerie</h1></span>
+                </a>
+                
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="/" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700">Accueil</a></li>
+                    <li class="relative group z-10">
+                      <a href="/galerie" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" id="galery-menu">La galerie</a>
+                      <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 focus:outline-hidden hidden" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" id="dropdown-menu">
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">les dessins</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">les planches de dessins</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">les BD</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">les tableaux</a>
+                      </div>
+                   </li>
+                    <li><a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700">À propos</a></li>
+                    <li><a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700">Contact</a></li>
+                    <li class="ml-auto">
+                      <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 bg-blue-500 text-white py-2 px-4 rounded-md">Administration</a>
+                  </li>
+                </ul>
+                <button class="md:hidden text-gray-600 focus:outline-none" id="menu-btn">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </nav>

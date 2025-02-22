@@ -78,8 +78,8 @@ export default [
   - ✅ esLint
   - ✅postgreSQL
   - ✅dotenv
-  - bulma
-  - Sass
+  - taillwind
+  - dev all
 
 
 
@@ -91,6 +91,7 @@ export default [
 - ✅.env
 - ✅.env.config
 - ✅eslint.config.js
+- taillwind
 
 
 
@@ -102,6 +103,7 @@ export default [
 - `to do liste`
 ```
 -  mettre la procedure de connection a taillwind dans le read-me.
+-  factorisé les cards
 
 
 

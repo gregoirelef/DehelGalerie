@@ -1,55 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dehellgalerie</title>
-
-  <!--import tailwind css -->
-  <link href="./css/output.css" rel="stylesheet">
-
-
-<!--import icone -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
- <!--import script js main -->
- <script defer src="../js/main.js"></script>
-
-</head>
-
-
-  <body class="bg-gray-100">
-
-    <nav class="bg-white shadow-lg">
-        <div class=" mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <a href="#" class="flex items-center space-x-2 text-xl font-bold text-gray-700">
-                  <img src="/favicon.ico" alt="Logo Trombinoclock"><span><h1 class="rounded-md font-medium text-gray-300">Dehelgalerie</h1></span>
-                </a>
-                
-                <ul class="hidden md:flex space-x-6">
-                    <li><a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700">Accueil</a></li>
-                    <li class="relative group z-10">
-                      <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" id="galery-menu">La galerie</a>
-                      <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 focus:outline-hidden hidden" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" id="dropdown-menu">
-                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">les dessins</a>
-                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">les planches de dessins</a>
-                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">les BD</a>
-                        <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">les tableaux</a>
-                      </div>
-                   </li>
-                    <li><a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700">À propos</a></li>
-                    <li><a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700">Contact</a></li>
-                    <li class="ml-auto">
-                      <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 bg-blue-500 text-white py-2 px-4 rounded-md">Administration</a>
-                  </li>
-                </ul>
-                <button class="md:hidden text-gray-600 focus:outline-none" id="menu-btn">
-                    ☰
-                </button>
-            </div>
-        </div>
-    </nav>
+<%- include('partials/header') %>
 
     <header class="relative w-full h-auto md:h-96 bg-center bg-cover flex items-center justify-center text-white text-center background-hdr-img">
       <div class="bg-black/50 absolute inset-0"></div> <!-- Overlay pour assombrir l'image -->
@@ -71,17 +20,18 @@
     </header>
 
     
-    <section class="py-2 bg-gray-50">
+    <section class="pt-2 bg-gray-50">
       <!-- Encart Titre -->
       <div class="relative w-full md:w-2/3 lg:w-2/3 mb-8 ml-2 text-white px-8 py-4" >
           <h2 class=" text-base md:text-xl lg:text-2xl font-bold relative z-10">Les dernières œuvres ajoutées</h2>
         <div class="w-full absolute inset-0 bg-gradient-to-r from-black to-transparent rounded-lg"></div>
       </div>
 
+      <div class="w-full overflow-hidden pl-35 relative" id="slider">
       <!-- Cards -->
-      <div class="flex flex-row justify-center gap-20">
+      <div class="flex flex-row gap-20 w-max mb-10 grid-5">
         <!-- Card 1 -->
-        <div class="flex flex-col rounded-2xl w-72 bg-[#ffffff] shadow-xl overflow-hidden">
+        <div class="flex flex-col rounded-2xl w-72 bg-[#ffffff] shadow-xl">
           <figure class="flex justify-center items-center rounded-2xl">
               <img src="../img/Micket et yoda.jpg" alt="Card Preview" class="rounded-t-2xl">
           </figure>
@@ -100,14 +50,14 @@
   
   
               <div class="flex justify-end pt-6">
-                  <button class="bg-[#7e22ce] text-[#ffffff] w-full font-bold text-base  p-3 rounded-lg hover:bg-purple-800 active:scale-95 transition-transform transform">Try it out!</button>
+                  <button class="bg-[#7e22ce] text-[#ffffff] w-full font-bold text-base  p-3 rounded-lg hover:bg-purple-800 active:scale-95 transition-transform transform">Découvrir</button>
               </div>
               <!---->
           </div>
           </div>
         
         <!-- Card 2 -->
-        <div class="flex flex-col rounded-2xl w-72 bg-[#ffffff] shadow-xl overflow-hidden">
+        <div class="flex flex-col rounded-2xl w-72 bg-[#ffffff] shadow-xl">
         <figure class="flex justify-center items-center rounded-2xl">
             <img src="../img/Micket et yoda.jpg" alt="Card Preview" class="rounded-t-2xl">
         </figure>
@@ -133,7 +83,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="flex flex-col rounded-2xl w-72 bg-[#ffffff] shadow-xl overflow-hidden">
+        <div class="flex flex-col rounded-2xl w-72 bg-[#ffffff] shadow-xl">
           <figure class="flex justify-center items-center rounded-2xl">
               <img src="../img/Micket et yoda.jpg" alt="Card Preview" class="rounded-t-2xl">
           </figure>
@@ -159,7 +109,7 @@
           </div>
         
         <!-- Card 4 -->
-        <div class="flex flex-col rounded-2xl w-72 bg-[#ffffff] shadow-xl overflow-hidden hidden">
+        <div class="flex flex-col rounded-2xl w-72 bg-[#ffffff] shadow-xl">
           <figure class="flex justify-center items-center rounded-2xl">
               <img src="../img/Micket et yoda.jpg" alt="Card Preview" class="rounded-t-2xl">
           </figure>
@@ -185,7 +135,7 @@
           </div>
 
           <!-- Card 5 -->
-        <div class="flex flex-col rounded-2xl w-72 bg-[#ffffff] shadow-xl overflow-hidden hidden">
+        <div class="flex flex-col rounded-2xl w-72 bg-[#ffffff] shadow-xl">
           <figure class="flex justify-center items-center rounded-2xl">
               <img src="../img/Micket et yoda.jpg" alt="Card Preview" class="rounded-t-2xl">
           </figure>
@@ -209,94 +159,29 @@
               <!---->
           </div>
           </div>
-      </div>
 
-      <!-- Bouton pour faire défiler plus de cartes -->
-      <div class="flex justify-center mt-6">
-        <button id="loadMore" class="bg-blue-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-200">
-          Voir plus
-        </button>
-      </div>
-    </section>
 
-  <footer class="text-black my-2 bg-bg-white-50 px-10">
-    <div class="container mx-auto px-4">
-      <!-- Logo and Social Icons -->
-      <div class="flex flex-col md:flex-row justify-start md:justify-between md:items-center mb-2">
-        <!-- Logo -->
-        <div>
-          <a href="/" class="text-xl font-bold flex items-center gap-2">
-            <span class="font-bold text-black">
-              DehelGalerie
-            </span>
-          </a>
-        </div>
-        <!-- Social Icons -->
-        
       </div>
-      <!-- Main Footer Content -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 text-black ">
-        <!-- Acceuil -->
-        <div>
-          <h3 class="font-semibold mb-4">Accueil</h3>
-        </div>
-        <!-- À propos -->
-        <div>
-          <h3 class="font-semibold mb-4">À propos</h3>
-        </div>
-        <!-- Contact -->
-        <div>
-          <h3 class="font-semibold mb-4">Contact</h3>
-        </div>
-        <!-- la galerie-->
-        <div>
-          <h3 class="font-semibold mb-4">La galerie</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-white transition-colors text-[#9ca3af]">les dessins</a></li>
-            <li><a href="#" class="hover:text-white transition-colors text-[#9ca3af]">les planches de dessins</a></li>
-            <li><a href="#" class="hover:text-white transition-colors text-[#9ca3af]">les BD</a></li>
-            <li><a href="#" class="hover:text-white transition-colors text-[#9ca3af]">les tableaux</a></li>
-          </ul>
-        </div>
-        <!-- Subscribe -->
-         <!-- 
-       <div class="flex-col md:col-span-2 gap-2  2xl:flex ">
-      <div class="font-bold uppercase  pb-3">Subscribe</div>
-      <p class="pb-2">Subscribe to our newsletter.</p>
-      <form class="flex items-center">
-       <input
-       type="email"
-       name="email"
-       placeholder="Enter your email"
-       class="w-full bg-gray-100 text-gray-700 rounded-l-lg py-3 px-4 focus:outline-none focus:ring-purple-600 focus:border-transparent"
-        required="">
-      <button
-      type="submit"
-      class=" bg-[#3F00E7] text-[#e0e1db] font-semibold py-3 px-6 rounded-r-lg transition-colors duration-300">
-      Subscribe
+     </div>
+
+    <div class="flex justify-between items-center">
+      <button id="scrollLeft" class="ml-145 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-200">
+            ⬅️
       </button>
-      </form>
-      </div>-->
+
+      <button id="scrollRight" class="mr-145 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-200">
+            ➡️
+      </button>
+
     </div>
-      <!-- Bottom Bar -->
-      <div class="border-t border-gray-800 pt-2 text-center items-center text-sm">
-       <p>
-        <a href="https://dehellgalerie.fr" target="_blank">
-         DehelGalerie
-        </a> 
-         © <%= new Date().getFullYear() %> Tous droits réservés 
-      </p>
-      </div>
-    </div>
-  </footer>
 
+    </section>
+  
+  
+  
+  <%- include('partials/footer') %>
 
-
-
-
-  </body>
-  </html>
-
+  
 
 
 
