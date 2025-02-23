@@ -5,3 +5,9 @@
     background-size: cover;
     background-position: center;
 }
+
+.background-apropos-img{
+    background-image: url('../img/fond-acceuil.JPG');
+    background-size: cover;
+    background-position: center;
+}

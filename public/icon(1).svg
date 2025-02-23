@@ -1,0 +1,13 @@
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+          <rect width="240" height="240" fill="#000000" rx="10" ry="10"/> 
+          <foreignObject width="240" height="240">
+            <div xmlns="http://www.w3.org/1999/xhtml" 
+                 style="display: flex; justify-content: center; align-items: center; 
+                        width: 240px; height: 240px;
+                        font-size: 94px; color: #e0e1db;">
+                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg>
+            </div>
+          </foreignObject>
+        </svg>
+      
