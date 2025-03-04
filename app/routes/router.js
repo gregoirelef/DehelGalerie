@@ -1,9 +1,9 @@
 import { Router } from "express";
 
 // Import des méthodes de controlleurs
-import * as mainController from "../routes/controllers/mainController.js";
-import * as galerieController from "../routes/controllers/galerieController.js";
-import * as contactController from "../routes/controllers/contactController.js";
+import * as mainController from "./controllers/mainController.js";
+import * as galerieController from "./controllers/galerieController.js";
+import * as contactController from "./controllers/contactController.js";
 
 const router = Router();
 
