@@ -1,6 +1,5 @@
 
-DROP TABLE IF EXISTS "dessins";
-DROP TABLE IF EXISTS "artiste";
+DROP TABLE IF EXISTS "dessins", "artiste";
 
 CREATE TABLE IF NOT EXISTS "artiste" (
   "id" SERIAL PRIMARY KEY,
