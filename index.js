@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(import.meta.dirname, "app/views"));
 
 app.use(express.static(path.join(import.meta.dirname, "app/public")));
-
+app.use("/uploads", express.static(path.join(import.meta.dirname, "uploads")));
 
 app.use(router);
 
